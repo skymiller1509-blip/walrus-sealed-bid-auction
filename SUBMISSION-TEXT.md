@@ -43,7 +43,7 @@ PNG. Upload one of them.
 
 ## 4. Public GitHub repo URL
 
-TODO, create the repo first. It will be:
+LIVE 2026-11-24 (15 files, commit 85a8e147, verified by Mabel):
 
 ```
 https://github.com/skymiller1509-blip/walrus-sealed-bid-auction
