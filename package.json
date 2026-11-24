@@ -1,0 +1,1 @@
+{"description":"Sealed-bid auction house for CLAY Hackathon III (Free Entry track). Bids are hidden as SHA-256 commitments stored as Walrus blobs until reveal.","engines":{"node":">=20"},"license":"MIT","name":"walrus-sealed-bid-auction","scripts":{"demo":"node demo.mjs","start":"node server.mjs","test":"node --test test.mjs"},"type":"module","version":"0.1.0"}

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="64" fill="#0b3d5c"/>
+  <text x="256" y="240" font-size="180" text-anchor="middle" fill="#ffffff">❄</text>
+  <text x="256" y="330" font-size="44" font-weight="bold" text-anchor="middle" fill="#7fd4ff" font-family="sans-serif">SEALED BID</text>
+  <text x="256" y="385" font-size="28" text-anchor="middle" fill="#ffffff" font-family="sans-serif">Walrus Auction House</text>
+</svg>
