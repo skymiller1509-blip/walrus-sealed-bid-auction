@@ -5,6 +5,7 @@
 // Amounts are play SUI on testnet only — no real money.
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
 import { openBlobStore } from "./src/walrus.mjs";
 import {
   createAuction,
@@ -19,7 +20,7 @@ const PORT = Number(process.env.PORT ?? 8787);
 const biddingSeconds = Number(process.env.BIDDING_SECONDS ?? 300);
 const revealSeconds = Number(process.env.REVEAL_SECONDS ?? 300);
 
-const { store, note } = await openBlobStore(new URL("./blobs", import.meta.url).pathname);
+const { store, note } = await openBlobStore(fileURLToPath(new URL("./blobs", import.meta.url)));
 console.log(`Storage: ${note}`);
 
 const auction = createAuction({
