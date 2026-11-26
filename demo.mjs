@@ -3,6 +3,7 @@
 // Uses a virtual clock (explicit `now` values) so the whole auction runs
 // in under a second. Amounts are play SUI on testnet only — no real money.
 import { openBlobStore } from "./src/walrus.mjs";
+import { fileURLToPath } from "node:url";
 import {
   commitmentFor,
   createAuction,
@@ -15,7 +16,7 @@ import {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function main() {
-  const { store, note } = await openBlobStore(new URL("./blobs", import.meta.url).pathname);
+  const { store, note } = await openBlobStore(fileURLToPath(new URL("./blobs", import.meta.url)));
   console.log(`Storage: ${note}\n`);
 
   const t0 = Date.now();
