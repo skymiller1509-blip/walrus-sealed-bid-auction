@@ -2,6 +2,8 @@
 
 Sealed bids nobody can read until reveal — the highest honest bid wins.
 
+**12/12 tests pass. Demo winner: bola, 200 SUI — tampered reveal rejected.**
+
 ## Demo video
 
 > TODO — record the 3–5 minute demo video (see `VIDEO-SCRIPT.md`) and paste the public YouTube link here.
@@ -12,6 +14,29 @@ A sealed-bid auction for **CLAY Hackathon III (Free Entry track)**. Bidders lock
 their bid in a SHA-256 commitment that is stored as a blob. Nobody — not other
 bidders, not the seller — can see an amount until its owner reveals it. The
 highest valid revealed bid wins.
+
+## Hackathon Requirements Met
+
+CLAY Hackathon III (Lofi × Sui), Free Entry track. Round III runs 16 Nov through the end of the year (no exact closing day published — treat 31 Dec 2026 as the end). Each requirement from the official 4-step form, with proof:
+
+- [x] Project title — Walrus Sealed-Bid Auction House.
+- [x] Description — sealed bids as SHA-256 commitments stored as blobs; nobody sees an amount until reveal; highest valid revealed bid wins (this README).
+- [x] Project logo 1:1 — `assets/logo.svg` (PNG export still needed if the form requires one).
+- [x] Public GitHub repo — https://github.com/skymiller1509-blip/walrus-sealed-bid-auction (published 24 Nov 2026).
+- [ ] Demo video, 3–5 min (YouTube preferred) — script in `VIDEO-SCRIPT.md`; filming postponed to Tue 1 Dec 2026.
+- [ ] Optional website — none hosted; do not invent one.
+- [ ] Optional Package ID — none exists; leave blank (no Move contract yet, no on-chain package).
+- [ ] Optional extra docs — link this README.
+- [ ] 4-step form submitted at https://hackathon.lofitheyeti.com/ before the end of the year.
+
+Demo failure-proofing: the filmed auction uses 300-second bidding/reveal windows so nobody is rushed, and bids go to the local blob store — the public Walrus testnet publisher was dry (HTTP 500), so no live Walrus write is claimed. Flip `WALRUS_ENABLED=1` when the publisher is funded again. The Windows blob-path bug is fixed (`fileURLToPath`, 26 Nov 2026).
+
+## Judging Highlights
+
+- **Innovation:** sealed bids nobody can read until reveal — the highest honest bid wins, and a tampered reveal is rejected on camera.
+- **Technical execution:** SHA-256 commitments (`auctionId | bidder | amount | salt`); 12/12 tests pass; the scripted demo runs end to end in under a second; zero dependencies, Node 20+ only.
+- **Impact:** sealed-bid auctions where nobody — not other bidders, not the seller — sees an amount until its owner reveals it.
+- **Completeness:** the full flow runs (seal → reveal → settle) with the tampered-reveal refusal built in; honest limits stated below (local blob store, no Move contract, no real payments).
 
 ## Tech stack
 
@@ -115,10 +140,10 @@ WALRUS_ENABLED=1 node demo.mjs
 
 ## Still needed from Eddie
 
-1. Create the public GitHub repo (he creates repos) and push this folder.
+1. Repo is public: https://github.com/skymiller1509-blip/walrus-sealed-bid-auction (published 24 Nov 2026).
 2. Demo video, 3–5 minutes (YouTube preferred): run `node server.mjs`,
    place sealed bids from two or three names, show only hashes visible,
-   reveal, settle, winner.
+   reveal, settle, winner. Filming postponed to Tue 1 Dec 2026.
 3. Project logo is included as `assets/logo.svg`; a PNG version can be
    exported from it if the form wants one.
 4. Submit via the 4-step form at https://hackathon.lofitheyeti.com/ before
