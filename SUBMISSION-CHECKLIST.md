@@ -18,7 +18,7 @@ Official page / submission form: https://hackathon.lofitheyeti.com/ (4-step form
 - [x] done — Solo is explicitly allowed ("Enter on your own, or compete as part of a team or community project")
 - [x] done — Track is Free Entry (not a Lofi mini-game, not an AI product)
 - [x] done — README has tagline, demo-video slot, what/why, tech stack, try-it-yourself, honest limits
-- [ ] todo — Public GitHub repo (required by the official checklist)
+- [x] done — Public GitHub repo: https://github.com/skymiller1509-blip/walrus-sealed-bid-auction (published 24 Nov 2026)
 - [ ] todo — Demo video 3–5 minutes, YouTube preferred (record per `VIDEO-SCRIPT.md`)
 - [ ] todo — Project logo as 1:1 JPG/PNG — `assets/logo.svg` exists; a PNG export is still needed if the form wants one
 - [ ] todo — 4-step form submitted at https://hackathon.lofitheyeti.com/ before the end of the year
@@ -29,7 +29,7 @@ Official page / submission form: https://hackathon.lofitheyeti.com/ (4-step form
 - [x] done — Description: sealed bids as SHA-256 commitments stored as blobs; nobody sees an amount until reveal; highest valid revealed bid wins (see README)
 - [x] done — Logo source: `assets/logo.svg` (1:1)
 - [ ] todo — PNG export of the logo (1:1 JPG/PNG) if the form requires it [M]
-- [ ] todo — Public GitHub repo created and this folder pushed [E]
+- [x] done — Public GitHub repo created and this folder pushed: https://github.com/skymiller1509-blip/walrus-sealed-bid-auction (24 Nov 2026)
 - [ ] todo — Demo video link (3–5 min, YouTube preferred) pasted into README and into the form [E]
 - [ ] todo — Optional website link (only if a live demo is hosted; do not invent one)
 - [ ] todo — Optional Package ID — none exists; leave blank (no Move contract yet, no on-chain package)
